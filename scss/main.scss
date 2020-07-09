@@ -65,6 +65,7 @@ body {
       //   box-shadow: 0 5px 10px black;
       @include desktop {
         bottom: 55px;
+        left: 27%;
       }
       .prev {
         img {
@@ -131,6 +132,7 @@ body {
       margin-bottom: 75px;
       @include desktop {
         display: flex;
+        font-size: 1.25rem;
       }
       &__name {
         font-weight: $weight-bold;
