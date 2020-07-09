@@ -1,0 +1,9 @@
+@mixin desktop {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin transition {
+  transition: all 300ms ease-in-out;
+}

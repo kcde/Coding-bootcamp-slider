@@ -3,7 +3,7 @@ const users = [
   {
     id: 0,
     name: "Tanya Sinclair",
-    image: "../images/image-tanya.jpg",
+    image: "/images/image-tanya.jpg",
     role: "UX Engineer",
     comment: `"I’ve been interested in coding for a while but never taken the jump, until now. 
         I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
@@ -12,7 +12,7 @@ const users = [
   {
     id: 1,
     name: "John Tarkpor",
-    image: "../images/image-john.jpg",
+    image: "/images/image-john.jpg",
     role: "Junior Front-end Developer",
     comment: `"If you want to lay the best foundation possible I’d recommend taking this course. 
         The depth the instructors go into is incredible. I now feel so confident about 
@@ -22,12 +22,13 @@ const users = [
 // selection required selectors
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
-const image = document.querySelector(".img");
+const image = document.querySelector(".main__image-img");
 const comment = document.querySelector(".comment");
-const name = document.querySelector(".name");
-const role = document.querySelector(".role");
+const name = document.querySelector(".info__name");
+const role = document.querySelector(".info__position");
+console.log(comment);
 
-let person = 0;
+let person = 1;
 
 //loading initial content
 window.addEventListener("DOMContentLoaded", function () {
@@ -40,6 +41,7 @@ function showPerson() {
   image.src = item.image;
   role.textContent = item.role;
   name.textContent = item.name;
+  console.log(item.image);
 }
 
 nextBtn.addEventListener("click", function () {
